@@ -6,16 +6,16 @@ from PIL import ImageFont
 
 
 def write_image(payload):
-    img = Image.new('RGB', (640, 480), color=(0, 0, 0))
+    img = Image.new('RGB', (480, 272), color=(0, 0, 0))
 
     d = ImageDraw.Draw(img)
 
     font = ImageFont.truetype("Lato-Black.ttf", 32)
-    d.text((230, 220), payload, fill=(32, 194, 14), font=font)
+    d.text((150, 100), payload, fill=(32, 194, 14), font=font)
 
     img.save('pil_text.png')
-    img.show()
-
+    #img.show()
+    os.system('feh pil_text.png &')
 
 def on_subscribe(client, userdata, mid, granted_qos):
     print("Subscribed to topic")
@@ -33,7 +33,7 @@ def on_message(client, userdata, msg):
 
     if str(msg.topic) in "the_gibson/test":
         print("YES")
-        os.system("killall display")
+        os.system("killall feh")
         write_image(msg.payload.decode())
 
 def on_connect(client, userdata,flags, rc):
