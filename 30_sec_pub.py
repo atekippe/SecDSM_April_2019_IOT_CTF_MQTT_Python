@@ -21,7 +21,7 @@ def on_connect(client, userdata,flags, rc):
 
 
 def pub_flag():
-    client.publish(topic="nothing_here/flag", payload="Go find teacup")
+    client.publish(topic="debug_mode/flag", payload="Go find teacup")
 
 
 broker = "myothercomputerisyourcomputer.com"
