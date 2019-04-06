@@ -4,5 +4,10 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="jdk" jdkName="Python 3.6 (SecDSM_IOT_CTF)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="Ringer0" />
+    <orderEntry type="module" module-name="WWHF_2018" />
+    <orderEntry type="module" module-name="Twitter" />
+    <orderEntry type="module" module-name="DCDark" />
+    <orderEntry type="module" module-name="CDC_Brute" />
   </component>
 </module>

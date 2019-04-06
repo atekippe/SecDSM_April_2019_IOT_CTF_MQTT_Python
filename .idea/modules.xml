@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../SSH_Brute/.idea/CDC_Brute.iml" filepath="$PROJECT_DIR$/../SSH_Brute/.idea/CDC_Brute.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../DCDark/.idea/DCDark.iml" filepath="$PROJECT_DIR$/../DCDark/.idea/DCDark.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Ringer0/.idea/Ringer0.iml" filepath="$PROJECT_DIR$/../Ringer0/.idea/Ringer0.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/SecDSM_IOT_CTF.iml" filepath="$PROJECT_DIR$/.idea/SecDSM_IOT_CTF.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Twitter/.idea/Twitter.iml" filepath="$PROJECT_DIR$/../Twitter/.idea/Twitter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../WWHF_2018/.idea/WWHF_2018.iml" filepath="$PROJECT_DIR$/../WWHF_2018/.idea/WWHF_2018.iml" />
     </modules>
   </component>
 </project>
