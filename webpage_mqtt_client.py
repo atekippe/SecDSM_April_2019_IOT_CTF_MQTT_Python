@@ -28,7 +28,7 @@ def on_message(client, userdata, msg):
         h.close()
 
         #write the new index.html - quick and dirty... Yes, I know there is XSS
-        f = open("index.html", "w")
+        f = open("/var/www/html/index.html", "w")
         f.write("<!DOCTYPE html>\r\n")
         f.write("<html>\r\n")
         f.write("<body>\r\n")
