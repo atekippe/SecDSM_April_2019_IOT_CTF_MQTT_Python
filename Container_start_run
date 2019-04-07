@@ -1,0 +1,6 @@
+
+docker build -t webpage_mqtt_client .
+docker run -t -d -p 80:80 webpage_mqtt_client
+docker exec -d hardcore_almeida service apache2 start
+docker exec -d hardcore_almeida python3 ./webpage_mqtt_client.py
+

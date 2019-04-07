@@ -15,9 +15,35 @@ def on_message(client, userdata, msg):
     print(msg.topic, msg.payload.decode())
 
     if str(msg.topic) in "the_gibson/haxor":
-        f = open("index.html", "a")
-        f.write(msg.payload.decode() + "\r\n")
+
+        #write the incoming mqtt message to file
+        i = open("haxors.txt", "a")
+        i.write(msg.payload.decode() + "\r\n")
+        i.close()
+
+        #read all members in the haxors.txt file
+
+        with open("haxors.txt") as h:
+            haxors = h.readlines()
+        h.close()
+
+        #write the new index.html - quick and dirty... Yes, I know there is XSS
+        f = open("index.html", "w")
+        f.write("<!DOCTYPE html>\r\n")
+        f.write("<html>\r\n")
+        f.write("<body>\r\n")
+
+        f.write("<p>Who has Haxored the Gibson?</p>\r\n")
+        f.write("<p>Haxors: </p>\r\n")
+
+        for haxor in haxors:
+            f.write("<p>" + haxor.rstrip('\n') + "</p>\r\n")
+
+        f.write("</body>\r\n")
+        f.write("</html>\r\n")
+
         f.close()
+
 
 
 def on_connect(client, userdata,flags, rc):
