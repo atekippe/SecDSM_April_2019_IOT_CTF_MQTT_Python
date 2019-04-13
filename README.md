@@ -1,1 +1,1 @@
-# IOT_CTF_MQTT_Python
+SecDSM MiniCTF Backend from April 2019
